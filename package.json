@@ -8,7 +8,7 @@
     "production": "webpack -p",
     "lint": "eslint app/.; exit 0",
     "fix": "eslint --fix app/.; exit 0",
-    "test": "NODE_PATH=./app mocha tests/.setup.js tests/**/*-test.js; exit 0"
+    "test": "NODE_PATH=./app mocha tests/.setup.js tests/**/*-test.*; exit 0"
   },
   "externals": {
     "cheerio": "window",
@@ -39,7 +39,8 @@
     "redux-thunk": "^2.1.0",
     "reselect": "^2.5.4",
     "html-webpack-plugin": "^2.22.0",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "enzyme": "^2.4.1"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
@@ -52,7 +53,6 @@
     "babel-preset-airbnb": "^2.1.1",
     "chai": "^3.5.0",
     "css-loader": "^0.25.0",
-    "enzyme": "^2.4.1",
     "eslint": "^3.7.1",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-import": "^2.0.1",
