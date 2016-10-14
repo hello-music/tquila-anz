@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { GenericPageLayout } from 'components';
 import { expect } from 'chai';
+import { describe, it } from 'mocha';
 import { NavBarContainer, ListViewContainer } from 'containers';
 
 describe('<GenericPageLayout />', () => {

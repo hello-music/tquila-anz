@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { NavBar } from 'components';
 import { expect } from 'chai';
+import { describe, it } from 'mocha';
 import { Link } from 'react-router';
 
 describe('<NavBar />', () => {

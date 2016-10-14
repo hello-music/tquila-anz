@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import { ListView } from 'components';
 import { ListViewContainer } from 'containers';
 import { expect } from 'chai';
+import { describe, it } from 'mocha';
 
 describe('<ListViewContainer />', () => {
   it('renders <ListView/ >', () => {

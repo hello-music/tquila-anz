@@ -3,6 +3,7 @@ import { mount, shallow } from 'enzyme';
 import { HomePage } from 'components';
 import { MainContainer } from 'containers';
 import { expect } from 'chai';
+import { describe, it } from 'mocha';
 
 const MockChildComponent = () => (<div />);
 describe('<MainContainer />', () => {

@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { ListView } from 'components';
 import { expect } from 'chai';
+import { describe, it } from 'mocha';
 import { ListViewHeaderContainer, ListViewContentContainer } from 'containers';
 
 describe('<ListView />', () => {

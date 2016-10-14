@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import { HomePage } from 'components';
 import { HomePageContainer } from 'containers';
 import { expect } from 'chai';
+import { describe, it } from 'mocha';
 
 describe('<HomePageContainer />', () => {
   it('renders <HomePage/ >', () => {
