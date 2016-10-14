@@ -1,4 +1,19 @@
+const routePaths = {
+  home: '/',
+  contacts: '/contacts',
+};
 export default {
+  routePaths,
+  cardTypes: [
+    {
+      name: 'account',
+      pathname: routePaths.home,
+    },
+    {
+      name: 'contact',
+      pathname: routePaths.contacts,
+    },
+  ],
   mockAccountsJson: {
     Accounts: [
       {

@@ -1,14 +1,15 @@
 import React from 'react';
-import { Router, Route, hashHistory, IndexRoute } from 'react-router';
-import { MainContainer, HomePageContainer } from 'containers';
+import { Router, Route, IndexRoute } from 'react-router';
+import { MainContainer, HomePageContainer, ContactsPageContainer } from 'containers';
 
-const routes = (
-  <Router history={hashHistory}>
-    <Route path="/" component={MainContainer}>
-      <IndexRoute component={HomePageContainer} />
-      <Route path="*" component={HomePageContainer} />
-    </Route>
-  </Router>
-);
-
-export default routes;
+export default function getRoutes(history) {
+  return (
+    <Router history={history}>
+      <Route path="/" component={MainContainer}>
+        <IndexRoute component={HomePageContainer} />
+        <Route path="contacts" component={ContactsPageContainer} />
+        <Route path="*" component={HomePageContainer} />
+      </Route>
+    </Router>
+  );
+}

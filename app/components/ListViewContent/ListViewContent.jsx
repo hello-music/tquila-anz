@@ -1,19 +1,26 @@
 import React, {PropTypes}  from 'react';
 import { List }  from 'immutable';
+import { AccountCardContainer, ContactCardContainer } from 'containers';
 
-const ListViewContent = (props) => (<div>{props.cards.map((card, index) => {
-  let content = null;
+const ListViewContent = props => (<div>{props.cardIds.map((id, index) => {
   switch (props.cardType) {
     case 'account':
-      content = (<div className="account-card" key={index}>account card template</div>);
-      break;
+      return (<AccountCardContainer key={index} id={id} />);
     case 'contact':
-      content = (<div className="contact-card" key={index}>contact card template</div>);
-      break;
+      return (<ContactCardContainer key={index} id={id} />);
     default:
-      content = null;
+      return null;
   }
-  return content;
 })}</div>);
 
+ListViewContent.propTypes = {
+  cardIds: PropTypes.instanceOf('List').isRequired,
+  cardType: PropTypes.string.isRequired,
+}
+
+ListViewContent.defaultProps = {
+  cardIds: [],
+};
+
 export default ListViewContent;
+
