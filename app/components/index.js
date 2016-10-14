@@ -4,3 +4,6 @@ export { default as NavBar } from './NavBar/NavBar.jsx';
 export { default as ListView } from './ListView/ListView.jsx';
 export { default as ListViewHeader } from './ListViewHeader/ListViewHeader.jsx';
 export { default as ListViewContent } from './ListViewContent/ListViewContent.jsx';
+export { default as CardHolder } from './CardHolder/CardHolder.jsx';
+export { default as AccountCard } from './AccountCard/AccountCard.jsx';
+export { default as ContactCard } from './ContactCard/ContactCard.jsx';

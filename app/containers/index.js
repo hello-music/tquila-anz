@@ -5,3 +5,6 @@ export { default as NavBarContainer } from './NavBar/NavBarContainer.jsx';
 export { default as ListViewContainer } from './ListView/ListViewContainer.jsx';
 export { default as ListViewHeaderContainer } from './ListViewHeader/ListViewHeaderContainer.jsx';
 export { default as ListViewContentContainer } from './ListViewContent/ListViewContentContainer.jsx';
+export { default as CardHolderContainer } from './CardHolder/CardHolderContainer.jsx';
+export { default as AccountCardContainer } from './AccountCard/AccountCardContainer.jsx';
+export { default as ContactCardContainer } from './ContactCard/ContactCardContainer.jsx';
