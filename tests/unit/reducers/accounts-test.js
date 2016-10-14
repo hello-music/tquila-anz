@@ -9,56 +9,55 @@ import thunk from 'redux-thunk';
 const store = createStore(
   accounts,
   applyMiddleware(thunk)
-);
-const FETCHING_ACCOUNTS = 'FETCHING_ACCOUNTS';
-const FETCHING_ACCOUNTS_FAILURE = 'FETCHING_ACCOUNTS_FAILURE';
-const FETCHING_ACCOUNTS_SUCCESS = 'FETCHING_ACCOUNTS_SUCCESS';
-const initialState = fromJS({ isFetching: true, error: '' });
-const mockFetchingAccountsAction = {
-  type: FETCHING_ACCOUNTS,
-};
-const mockAccountA = {
-  name: 'Team A',
-  phone: '0412345678',
-  email: 'team@teama.com',
-  contacts: ['Contact AA', 'Contact AB'],
-};
-const mockAccountB = {
-  name: 'Team B',
-  phone: '0418765432',
-  email: 'team@teama.com',
-  contacts: ['Contact AA', 'Contact AB'],
-};
-const mockContactA = {
-  name: 'Contact AB',
-  highRisk: false,
-  amount: 20000,
-};
-const mockContactB = {
-  name: 'Contact BA',
-  highRisk: false,
-  amount: 20000,
-};
-const mockAccounts = {
-  accountA: mockAccountA,
-  accountB: mockAccountB,
-};
-const mockContacts = {
-  a: mockContactA,
-  b: mockContactB,
-};
-const mockError = 'error';
-const mockFetchingAccountsSuccessAction = {
-  type: FETCHING_ACCOUNTS_SUCCESS,
-  accounts: mockAccounts,
-  contacts: mockContacts,
-};
-
-const mockFetchingAccountsFailureAction = {
-  type: FETCHING_ACCOUNTS_FAILURE,
-  error: mockError,
-};
-const errorMsg = 'Error fetching accounts.';
+  ),
+  FETCHING_ACCOUNTS = 'FETCHING_ACCOUNTS',
+  FETCHING_ACCOUNTS_FAILURE = 'FETCHING_ACCOUNTS_FAILURE',
+  FETCHING_ACCOUNTS_SUCCESS = 'FETCHING_ACCOUNTS_SUCCESS',
+  initialState = fromJS({ isFetching: true, error: '' }),
+  mockFetchingAccountsAction = {
+    type: FETCHING_ACCOUNTS,
+  },
+  mockAccountA = {
+    name: 'Team A',
+    phone: '0412345678',
+    email: 'team@teama.com',
+    contacts: ['Contact AA', 'Contact AB'],
+  },
+  mockAccountB = {
+    name: 'Team B',
+    phone: '0418765432',
+    email: 'team@teama.com',
+    contacts: ['Contact AA', 'Contact AB'],
+  },
+  mockContactA = {
+    name: 'Contact AB',
+    highRisk: false,
+    amount: 20000,
+  },
+  mockContactB = {
+    name: 'Contact BA',
+    highRisk: false,
+    amount: 20000,
+  },
+  mockAccounts = {
+    accountA: mockAccountA,
+    accountB: mockAccountB,
+  },
+  mockContacts = {
+    a: mockContactA,
+    b: mockContactB,
+  },
+  mockError = 'error',
+  mockFetchingAccountsSuccessAction = {
+    type: FETCHING_ACCOUNTS_SUCCESS,
+    accounts: mockAccounts,
+    contacts: mockContacts,
+  },
+  mockFetchingAccountsFailureAction = {
+    type: FETCHING_ACCOUNTS_FAILURE,
+    error: mockError,
+  },
+  errorMsg = 'Error fetching accounts.';
 function mockGetAccountsSuccess() {
   return new Promise((resolve, reject) => {
     resolve({ entities: {} });

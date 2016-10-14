@@ -3,33 +3,32 @@ import { describe, it } from 'mocha';
 import contacts, { toggleRisk } from 'redux/modules/contacts';
 import { fromJS } from 'immutable';
 
-const ADD_CONTACTS = 'ADD_CONTACTS';
-const FETCHING_ACCOUNTS_SUCCESS = 'FETCHING_ACCOUNTS_SUCCESS';
-const TOGGLE_RISK = 'TOGGLE_RISK';
-const initialState = fromJS({});
-const mockContactA = {
-  name: 'Contact AB',
-  highRisk: false,
-  amount: 20000,
-};
-const mockContactB = {
-  name: 'Contact BA',
-  highRisk: false,
-  amount: 20000,
-};
-const mockContacts = {
-  [mockContactA.name]: mockContactA,
-  [mockContactB.name]: mockContactB,
-};
-const contactId = mockContactA.name;
-const mockToggleRiskAction = {
-  type: TOGGLE_RISK,
-  contactId: mockContactA.name,
-};
-const mockFetchingAccountsSuccessAction = {
-  type: FETCHING_ACCOUNTS_SUCCESS,
-  contacts: mockContacts,
-};
+const FETCHING_ACCOUNTS_SUCCESS = 'FETCHING_ACCOUNTS_SUCCESS',
+  TOGGLE_RISK = 'TOGGLE_RISK',
+  initialState = fromJS({}),
+  mockContactA = {
+    name: 'Contact AB',
+    highRisk: false,
+    amount: 20000,
+  },
+  mockContactB = {
+    name: 'Contact BA',
+    highRisk: false,
+    amount: 20000,
+  },
+  mockContacts = {
+    [mockContactA.name]: mockContactA,
+    [mockContactB.name]: mockContactB,
+  },
+  contactId = mockContactA.name,
+  mockToggleRiskAction = {
+    type: TOGGLE_RISK,
+    contactId: mockContactA.name,
+  },
+  mockFetchingAccountsSuccessAction = {
+    type: FETCHING_ACCOUNTS_SUCCESS,
+    contacts: mockContacts,
+  };
 describe('Reducer: contacts', () => {
   it('should handle FETCHING_ACCOUNTS', () => {
 

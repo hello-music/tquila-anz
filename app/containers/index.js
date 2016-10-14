@@ -8,3 +8,4 @@ export { default as ListViewContentContainer } from './ListViewContent/ListViewC
 export { default as CardHolderContainer } from './CardHolder/CardHolderContainer.jsx';
 export { default as AccountCardContainer } from './AccountCard/AccountCardContainer.jsx';
 export { default as ContactCardContainer } from './ContactCard/ContactCardContainer.jsx';
+export { default as ContactsPageContainer } from './ContactsPage/ContactsPageContainer.jsx';
