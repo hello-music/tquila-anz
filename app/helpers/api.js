@@ -9,6 +9,6 @@ export function getAccounts() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(normalize(humps.camelizeKeys(mockAccountsJson), { accounts: schema.arrayOfAccounts }));
-    }, 2000);
+    }, 500);
   });
 }
