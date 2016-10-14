@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { HomePage } from 'components';
 import { expect } from 'chai';
+import { GenericPageLayoutContainer } from 'containers';
 
-const helloWorld = 'Hello world!';
 describe('<HomePage />', () => {
-  it('renders helloWorld', () => {
+  it('renders GenericPageLayoutContainer', () => {
     const wrapper = shallow(<HomePage />);
-    expect(wrapper.text()).to.contain(helloWorld);
+    expect(wrapper.find(GenericPageLayoutContainer)).to.have.length(1);
   });
 });

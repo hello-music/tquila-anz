@@ -1,4 +1,5 @@
 import React  from 'react';
+import { GenericPageLayoutContainer } from 'containers';
 
-const HomePage = () => (<div>{'Hello world!'}</div>);
+const HomePage = () => (<GenericPageLayoutContainer />);
 export default HomePage;
