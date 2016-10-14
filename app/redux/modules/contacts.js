@@ -1,5 +1,6 @@
 import { FETCHING_ACCOUNTS_SUCCESS } from './accounts';
 import { fromJS } from 'immutable';
+
 const ADD_CONTACTS = 'ADD_CONTACTS';
 const TOGGLE_RISK = 'TOGGLE_RISK';
 
