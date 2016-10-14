@@ -1,6 +1,6 @@
 import React  from 'react';
 import { ListViewContent } from 'components';
 
-const ListViewHeaderContentContainer = () => (<ListViewContent />);
+const ListViewContentContainer = () => (<ListViewContent />);
 
-export default ListViewHeaderContentContainer;
+export default ListViewContentContainer;
