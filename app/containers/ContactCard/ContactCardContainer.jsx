@@ -6,12 +6,17 @@ import * as contactsActionCreators from 'redux/modules/contacts';
 import { Map } from 'immutable';
 
 class ContactCardContainer extends React.Component {
+  constructor() {
+    super();
+    this.handleClick = this.handleClick.bind(this);
+  }
+
   render() {
-    return (<ContactCard contact={this.props.contact} handleClick={this.handleClick} />);
+    return (<ContactCard contact={this.props.contact} handleClick={this.handleClick}/>);
   }
 
   handleClick() {
-    console.log('clicked');
+    this.props.toggleRisk(this.props.id);
   }
 }
 

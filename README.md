@@ -45,6 +45,7 @@ There are three steps developed during the completion of this test:
 - Normalizr - **normalise the json response**
 - Reselect - **computed state results**
 - Redux-thunk - **function blocks of actions**
+- React-router-redux - **add url to redux store**
 #### Bundling/Server
 - Webpack
 - Webpack-server
