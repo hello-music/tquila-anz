@@ -6,6 +6,11 @@ import * as accountsActionCreators from 'redux/modules/accounts';
 import { Map } from 'immutable';
 
 class AccountCardContainer extends React.Component {
+  constructor() {
+    super();
+    this.handleClick = this.handleClick.bind(this);
+  }
+
   render() {
     return (<AccountCard account={this.props.account} handleClick={this.handleClick}/>);
   }
@@ -19,6 +24,10 @@ class AccountCardContainer extends React.Component {
     });
   }
 }
+
+AccountCardContainer.contextTypes = {
+  router: PropTypes.object.isRequired,
+};
 
 AccountCardContainer.propTypes = {
   id: PropTypes.string.isRequired,
