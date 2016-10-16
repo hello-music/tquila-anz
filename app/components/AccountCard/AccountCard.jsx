@@ -1,4 +1,5 @@
-import React  from 'react';
+import React, {PropTypes} from 'react';
+import { Map } from 'immutable';
 
 const AccountCard = props => (
   <div className="account-card" onClick={props.handleClick}>
@@ -7,5 +8,10 @@ const AccountCard = props => (
     <p>{props.account.get('phone')}</p>
   </div>
 );
+
+AccountCard.propTypes = {
+  account: PropTypes.instanceOf(Map).isRequired,
+  handleClick: PropTypes.func.isRequired,
+};
 
 export default AccountCard;

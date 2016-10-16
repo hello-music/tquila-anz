@@ -1,5 +1,6 @@
 import { createSelector } from 'reselect';
 import constants from 'config/constants';
+import { List } from 'immutable';
 
 const { routePaths } = constants;
 const entitiesNonIdKeys = ['isFetching', 'error'];
@@ -22,14 +23,14 @@ export const isContactsPage = createSelector(
 export const getAccountIds = createSelector(
     [accounts => accounts],
     (accounts) => {
-      return accounts.keySeq().filter(key => entitiesNonIdKeys.indexOf(key) === -1).toList();
+      return accounts.keySeq().filter(key => entitiesNonIdKeys.indexOf(key) === -1).toList() || List([]);
     }
 );
 
 export const getContactIdsOfAccount = createSelector(
     [account => account],
     (account) => {
-      return account ? account.get('contacts').valueSeq().toList() : [];
+      return account ? account.get('contacts').valueSeq().toList() : List([]);
     }
 );
 

@@ -31,7 +31,7 @@ AccountCardContainer.contextTypes = {
 
 AccountCardContainer.propTypes = {
   id: PropTypes.string.isRequired,
-  account: PropTypes.instanceOf('Map').isRequired,
+  account: PropTypes.instanceOf(Map).isRequired,
 };
 
 function mapStateToProps({ accounts }, props) {

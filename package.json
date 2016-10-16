@@ -62,6 +62,7 @@
     "jsdom": "^9.6.0",
     "mocha": "^3.1.2",
     "react-addons-test-utils": "^15.3.2",
+    "redux-mock-store": "^1.2.1",
     "sinon": "^1.17.6",
     "style-loader": "^0.13.1",
     "webpack-dev-server": "^1.16.2"

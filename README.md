@@ -46,6 +46,7 @@ There are three steps developed during the completion of this test:
 - Reselect - **computed state results**
 - Redux-thunk - **function blocks of actions**
 - React-router-redux - **add url to redux store**
+- Redux-mock-store - **crate mock store for testing**
 #### Bundling/Server
 - Webpack
 - Webpack-server

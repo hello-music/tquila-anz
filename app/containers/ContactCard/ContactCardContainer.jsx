@@ -22,7 +22,7 @@ class ContactCardContainer extends React.Component {
 
 ContactCardContainer.propTypes = {
   id: PropTypes.string.isRequired,
-  contact: PropTypes.instanceOf('Map').isRequired,
+  contact: PropTypes.instanceOf(Map).isRequired,
 };
 
 function mapStateToProps({ contacts }, props) {

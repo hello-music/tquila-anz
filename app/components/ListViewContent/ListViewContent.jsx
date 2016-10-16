@@ -2,7 +2,7 @@ import React, {PropTypes}  from 'react';
 import { List }  from 'immutable';
 import { AccountCardContainer, ContactCardContainer } from 'containers';
 
-const ListViewContent = props => (<div>{props.cardIds.map((id, index) => {
+const ListViewContent = props => (<div className="list-content">{props.cardIds.map((id, index) => {
   switch (props.cardType) {
     case 'account':
       return (<AccountCardContainer key={index} id={id} />);
@@ -14,12 +14,8 @@ const ListViewContent = props => (<div>{props.cardIds.map((id, index) => {
 })}</div>);
 
 ListViewContent.propTypes = {
-  cardIds: PropTypes.instanceOf('List').isRequired,
+  cardIds: PropTypes.instanceOf(List).isRequired,
   cardType: PropTypes.string.isRequired,
-}
-
-ListViewContent.defaultProps = {
-  cardIds: [],
 };
 
 export default ListViewContent;

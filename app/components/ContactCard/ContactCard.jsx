@@ -10,7 +10,7 @@ const ContactCard = props => (
 );
 ContactCard.propTypes = {
   handleClick: PropTypes.func.isRequired,
-  contact: PropTypes.instanceOf('Map').isRequired,
+  contact: PropTypes.instanceOf(Map).isRequired,
 };
 
 export default ContactCard;

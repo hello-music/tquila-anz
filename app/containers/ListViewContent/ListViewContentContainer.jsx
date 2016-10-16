@@ -11,7 +11,7 @@ const { cardTypes } = constants;
 const ListViewContentContainer = props => (<ListViewContent cardIds={props.cardIds} cardType={props.cardType}/>);
 
 ListViewContentContainer.propTypes = {
-  cardIds: PropTypes.instanceOf('List').isRequired,
+  cardIds: PropTypes.instanceOf(List).isRequired,
   cardType: PropTypes.string.isRequired,
 };
 

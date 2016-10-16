@@ -2,24 +2,25 @@ import React from 'react';
 import { describe, it, before, after } from 'mocha';
 import { shallow } from 'enzyme';
 import { ListViewContent } from 'components';
+import { AccountCardContainer, ContactCardContainer } from 'containers';
 import { expect } from 'chai';
 import { List } from 'immutable';
 import sinon from 'sinon';
 
 const mockCardAccountType = 'account';
 const mockCardContactType = 'contact';
-const mockAccountCards = List([{}, {}, {}]);
-const mockContactCards = List([{}, {}, {}]);
+const mockAccountCardIds = List([1,2,3]);
+const mockContactCardIds = List([1,2,3]);
 
 describe('<ListViewContent />', () => {
-  it('renders text account cards', () => {
+  it('renders AccountCardContainer', () => {
     const wrapper = shallow(
-      <ListViewContent cardType={mockCardAccountType} cards={mockAccountCards}/>);
-    expect(wrapper.find('.account-card')).to.have.length(3);
+      <ListViewContent cardType={mockCardAccountType} cardIds={mockAccountCardIds} />);
+    expect(wrapper.find(AccountCardContainer)).to.have.length(3);
   });
-  it('renders text contact cards', () => {
+  it('renders ContactCardContainer', () => {
     const wrapper = shallow(
-      <ListViewContent cardType={mockCardContactType} cards={mockContactCards}/>);
-    expect(wrapper.find('.contact-card')).to.have.length(3);
+      <ListViewContent cardType={mockCardContactType} cardIds={mockContactCardIds} />);
+    expect(wrapper.find(ContactCardContainer)).to.have.length(3);
   });
 });
