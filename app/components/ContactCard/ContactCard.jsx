@@ -11,7 +11,7 @@ const ContactCard = props => (
   <div className={`${contactCard} ${props.contact.get('highRisk') && highRisk }`} onClick={props.handleClick}>
     <p className={title}>{props.contact.get('name')}</p>
     <p className={title}>{props.contact.get('highRisk') ? <FrownIcon/> : <SmileIcon/>}</p>
-    <p className={amount}>{`$ ${formattedMoney(`${props.contact.get('amount')}`)}`}</p>
+    <p className={amount}>{`$ ${formattedMoney(`${props.contact.get('amount')}`)}${props.contact.get('highRisk') ? ' - High risk' : ''}`}</p>
   </div>
 );
 ContactCard.propTypes = {
