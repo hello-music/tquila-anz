@@ -34,10 +34,12 @@ There are three steps developed during the completion of this test:
 ```
 
 ## Stack
+
 ### Framework
 - React
 - Redux
 - React-router
+
 ### Plugins
 - Babel
 - Humps - **camelise json responses**
@@ -48,16 +50,19 @@ There are three steps developed during the completion of this test:
 - React-router-redux - **add url to redux store**
 - Redux-mock-store - **crate mock store for testing**
 - React-bootstrap - **provide UI**
+
 #### Bundling/Server
 - Webpack
 - Webpack-server
 - Css modules - **modular css for components**
 - Hot modules replacement
+
 ### Tesing
- - Enzyme
- - Mocha
- - Chai
- - Sinon
+- Enzyme
+- Mocha
+- Chai
+- Sinon
+
 ### Code Quality Control
 - Eslint
 - Eslint-plugin-airbnb - **personal preference**
