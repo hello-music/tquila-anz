@@ -3,7 +3,7 @@ import { FETCHING_ACCOUNTS_SUCCESS } from './accounts';
 
 const TOGGLE_RISK = 'TOGGLE_RISK';
 
-export function toggleRisk(contactId) {
+export function toggleRisk (contactId) {
   return {
     type: TOGGLE_RISK,
     contactId,
@@ -12,7 +12,7 @@ export function toggleRisk(contactId) {
 
 const initialState = fromJS({});
 
-export default function contacts(state = initialState, action) {
+export default function contacts (state = initialState, action) {
   let oldContact = null;
   switch (action.type) {
     case FETCHING_ACCOUNTS_SUCCESS:

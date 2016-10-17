@@ -3,7 +3,13 @@ const routePaths = {
   contacts: '/contacts',
 };
 export default {
+  /*********************************
+   * route paths
+   *********************************/
   routePaths,
+  /*********************************
+   * card types and path name mappings
+   *********************************/
   cardTypes: [
     {
       name: 'account',
@@ -14,6 +20,9 @@ export default {
       pathname: routePaths.contacts,
     },
   ],
+  /*********************************
+   * Mock json response
+   *********************************/
   mockAccountsJson: {
     Accounts: [
       {

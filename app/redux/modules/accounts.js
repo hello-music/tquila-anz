@@ -4,20 +4,20 @@ const FETCHING_ACCOUNTS = 'FETCHING_ACCOUNTS';
 const FETCHING_ACCOUNTS_FAILURE = 'FETCHING_ACCOUNTS_FAILURE';
 export const FETCHING_ACCOUNTS_SUCCESS = 'FETCHING_ACCOUNTS_SUCCESS';
 
-function fetchingAccounts() {
+function fetchingAccounts () {
   return {
     type: FETCHING_ACCOUNTS,
   };
 }
 
-function fetchingAccountsFailure(error) {
+function fetchingAccountsFailure (error) {
   return {
     type: FETCHING_ACCOUNTS_FAILURE,
-    error: 'Error fetching accounts.',
+    error: error || 'Error fetching accounts.',
   };
 }
 
-function fetchingAccountsSuccess({ accounts, contacts }) {
+function fetchingAccountsSuccess ({ accounts, contacts }) {
   return {
     type: FETCHING_ACCOUNTS_SUCCESS,
     accounts,
@@ -25,7 +25,7 @@ function fetchingAccountsSuccess({ accounts, contacts }) {
   };
 }
 
-export function fetchAndHandleAccounts(getAccountsFunc) {
+export function fetchAndHandleAccounts (getAccountsFunc) {
   return function (dispatch) {
     dispatch(fetchingAccounts());
     return getAccountsFunc().then(
@@ -40,7 +40,7 @@ const initialState = fromJS({
   error: '',
 });
 
-export default function accounts(state = initialState, action) {
+export default function accounts (state = initialState, action) {
   let apiDoneState = {};
   switch (action.type) {
     case FETCHING_ACCOUNTS:

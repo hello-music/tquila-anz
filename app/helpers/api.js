@@ -5,7 +5,7 @@ import humps from 'humps';
 
 const { mockAccountsJson } = constants;
 
-export function getAccounts() {
+export function getAccounts () {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(normalize(humps.camelizeKeys(mockAccountsJson), { accounts: schema.arrayOfAccounts }));
