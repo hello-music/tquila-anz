@@ -11,7 +11,6 @@ function fetchingAccounts() {
 }
 
 function fetchingAccountsFailure(error) {
-  console.warn(error);
   return {
     type: FETCHING_ACCOUNTS_FAILURE,
     error: 'Error fetching accounts.',
@@ -42,6 +41,7 @@ const initialState = fromJS({
 });
 
 export default function accounts(state = initialState, action) {
+  let apiDoneState = {};
   switch (action.type) {
     case FETCHING_ACCOUNTS:
       return state.merge({
@@ -54,7 +54,7 @@ export default function accounts(state = initialState, action) {
         error: action.error,
       });
     case FETCHING_ACCOUNTS_SUCCESS:
-      const apiDoneState = state.merge({
+      apiDoneState = state.merge({
         isFetching: false,
         error: '',
       });

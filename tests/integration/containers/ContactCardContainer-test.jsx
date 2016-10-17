@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { ContactCard } from 'components';
 import { ContactCardContainer } from 'containers';
 import { expect } from 'chai';
@@ -22,7 +22,7 @@ const store = mockStore(storeStateMock);
 
 describe('<ContactCardContainer />', () => {
   it('renders <ContactCard/ >', () => {
-    const wrapper = mount(<ContactCardContainer store={store} id="Team A"/>);
-    expect(wrapper.find('.contact-card')).to.have.length(1);
+    const wrapper = shallow(<ContactCardContainer store={store} id="Team A"/>);
+    expect(wrapper.find(ContactCard)).to.have.length(1);
   });
 });

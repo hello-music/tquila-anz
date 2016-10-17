@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { AccountCard } from 'components';
+import { LabelDescriptionComboContainer } from 'containers';
 import { expect } from 'chai';
 import { describe, it } from 'mocha';
 import { fromJS } from 'immutable';
@@ -13,12 +14,11 @@ const mockAccount = fromJS({
 });
 
 describe('<AccountCard />', () => {
-  it('renders account name, email and phone', () => {
+  it('renders account name, and two <LabelDescriptionComboContainer />s', () => {
     const clickSyp = sinon.spy();
     const wrapper = shallow(<AccountCard account={mockAccount} handleClick={clickSyp} />);
     expect(wrapper.text()).to.contain(mockAccount.get('name'));
-    expect(wrapper.text()).to.contain(mockAccount.get('email'));
-    expect(wrapper.text()).to.contain(mockAccount.get('phone'));
+    expect(wrapper.find(LabelDescriptionComboContainer)).to.have.length(2);
   });
   it('handles click', () => {
     const clickSyp = sinon.spy();

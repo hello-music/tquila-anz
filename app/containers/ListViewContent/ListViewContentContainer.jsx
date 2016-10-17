@@ -3,8 +3,6 @@ import { ListViewContent } from 'components';
 import { List } from 'immutable';
 import { getAccountIds, getContactIdsOfAccount, isContactsPage, isHomePage } from 'helpers/selectors';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as accountsActionCreators from 'redux/modules/accounts';
 import constants from 'config/constants';
 
 const { cardTypes } = constants;

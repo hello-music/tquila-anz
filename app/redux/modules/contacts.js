@@ -1,7 +1,6 @@
-import { FETCHING_ACCOUNTS_SUCCESS } from './accounts';
 import { fromJS } from 'immutable';
+import { FETCHING_ACCOUNTS_SUCCESS } from './accounts';
 
-const ADD_CONTACTS = 'ADD_CONTACTS';
 const TOGGLE_RISK = 'TOGGLE_RISK';
 
 export function toggleRisk(contactId) {
@@ -14,11 +13,12 @@ export function toggleRisk(contactId) {
 const initialState = fromJS({});
 
 export default function contacts(state = initialState, action) {
+  let oldContact = null;
   switch (action.type) {
     case FETCHING_ACCOUNTS_SUCCESS:
       return state.merge(action.contacts);
     case TOGGLE_RISK:
-      const oldContact = state.get(action.contactId);
+      oldContact = state.get(action.contactId);
       return state.merge({
         [action.contactId]: oldContact.set('highRisk', !oldContact.get('highRisk')),
       });

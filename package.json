@@ -8,7 +8,7 @@
     "production": "webpack -p",
     "lint": "eslint app/.; exit 0",
     "fix": "eslint --fix app/.; exit 0",
-    "test": "NODE_PATH=./app mocha tests/.setup.js tests/**/*-test.*; exit 0"
+    "test": "NODE_PATH=./app mocha --require ignore-styles tests/.setup.js tests/**/*-test.*; exit 0"
   },
   "externals": {
     "cheerio": "window",
@@ -60,6 +60,7 @@
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
+    "ignore-styles": "^5.0.1",
     "jsdom": "^9.6.0",
     "mocha": "^3.1.2",
     "react-addons-test-utils": "^15.3.2",

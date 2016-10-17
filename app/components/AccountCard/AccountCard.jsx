@@ -3,8 +3,8 @@ import { Map } from 'immutable';
 import EmailIcon from 'react-icons/lib/fa/envelope-o';
 import MobileIcon from 'react-icons/lib/fa/mobile';
 import { formattedMobile } from 'helpers/formatters';
-import { title, accountCard, content } from './styles.css';
 import { LabelDescriptionComboContainer } from 'containers';
+import { title, accountCard, content } from './styles.css';
 
 const AccountCard = props => (
   <div className={accountCard} onClick={props.handleClick}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { AccountCard } from 'components';
 import { AccountCardContainer } from 'containers';
 import { expect } from 'chai';
@@ -29,7 +29,8 @@ const childContextTypes = {
 
 describe('<AccountCardContainer />', () => {
   it('renders <AccountCard />', () => {
-    const wrapper = mount(<AccountCardContainer store={store} id={'email'} />, { context, childContextTypes });
-    expect(wrapper.find('.account-card')).to.have.length(1);
+    const wrapper = shallow(<AccountCardContainer store={store} id={'email'} />, { context, childContextTypes });
+    console.log('a card container: ', wrapper);
+    expect(wrapper.find(AccountCard)).to.have.length(1);
   });
 });
