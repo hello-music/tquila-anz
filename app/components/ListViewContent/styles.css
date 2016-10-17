@@ -1,0 +1,9 @@
+.listContent{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.item {
+    margin: 0 10px 10px 0;
+}

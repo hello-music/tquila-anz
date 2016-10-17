@@ -1,13 +1,14 @@
 import React, {PropTypes}  from 'react';
 import { List }  from 'immutable';
-import { AccountCardContainer, ContactCardContainer } from 'containers';
+import { AccountCardContainer, ContactCardContainer, CardHolderContainer } from 'containers';
+import { listContent, item } from './styles.css';
 
-const ListViewContent = props => (<div className="list-content">{props.cardIds.map((id, index) => {
+const ListViewContent = props => (<div className={listContent}>{props.cardIds.map((id, index) => {
   switch (props.cardType) {
     case 'account':
-      return (<AccountCardContainer key={index} id={id} />);
+      return (<div className={item} key={index}><CardHolderContainer><AccountCardContainer id={id}/></CardHolderContainer></div>);
     case 'contact':
-      return (<ContactCardContainer key={index} id={id} />);
+      return (<div className={item} key={index}><CardHolderContainer><ContactCardContainer id={id}/></CardHolderContainer></div>);
     default:
       return null;
   }

@@ -1,4 +1,4 @@
 import React  from 'react';
 
-const ListViewHeader = () => (<div>{'header'}</div>);
+const ListViewHeader = props => props.header ? (<div>{'header'}</div>) : (<div></div>);
 export default ListViewHeader;

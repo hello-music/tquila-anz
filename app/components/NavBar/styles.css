@@ -1,0 +1,15 @@
+.navBar{
+    composes: fullWidth from 'sharedStyles/styles.css';
+    height: 40px;
+    background-color: cadetblue;
+}
+.navBar a {
+    color: white;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    height: 100%;
+}
