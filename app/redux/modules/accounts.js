@@ -10,10 +10,10 @@ function fetchingAccounts () {
   };
 }
 
-function fetchingAccountsFailure (error) {
+function fetchingAccountsFailure () {
   return {
     type: FETCHING_ACCOUNTS_FAILURE,
-    error: error || 'Error fetching accounts.',
+    error: 'Error fetching accounts.',
   };
 }
 

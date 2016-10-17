@@ -8,9 +8,9 @@ import { header } from './styles.css';
 const ListViewHeader = props => props.header ? (
   <div className={header}>
     <p>{props.header.get('name')}</p>
-    <LabelDescriptionComboContainer label={<EmailIcon />} description={props.header.get('email')+''}/>
+    <LabelDescriptionComboContainer label={<EmailIcon />} description={`${props.header.get('email')}`}/>
     <LabelDescriptionComboContainer label={<MobileIcon />}
-                                    description={formattedMobile(props.header.get('phone') + '')}/>
+                                    description={formattedMobile(`${props.header.get('phone')}`)}/>
   </div>) :
   (<div></div>);
 ListViewHeader.defaultProps = {

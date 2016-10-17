@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import accounts, { fetchAndHandleAccounts } from 'redux/modules/accounts';
-import { fromJS } from 'immutable';
+import { fromJS, Map } from 'immutable';
 import sinon from 'sinon';
 import { describe, it } from 'mocha';
 import { createStore, applyMiddleware } from 'redux';
@@ -58,13 +58,13 @@ const store = createStore(
     error: mockError,
   },
   errorMsg = 'Error fetching accounts.';
-function mockGetAccountsSuccess() {
+function mockGetAccountsSuccess () {
   return new Promise((resolve, reject) => {
     resolve({ entities: {} });
   });
 }
 
-function mockGetAccountsFail() {
+function mockGetAccountsFail () {
   return new Promise((resolve, reject) => {
     reject({});
   });
@@ -110,7 +110,7 @@ describe('Reducer: accounts', () => {
     store.dispatch(fetchAndHandleAccounts(mockGetAccountsFail)).then(()=> {
       state = store.getState();
       expect(state.get('isFetching')).to.equal(false);
-      expect(state.get('error')).to.equal(errorMsg);
+      expect(state.get('error')).to.eql(errorMsg);
       done();
     });
   });

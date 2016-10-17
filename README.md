@@ -64,7 +64,7 @@ There are three steps developed during the completion of this test:
 
 ### Installation
 
-Dillinger requires [Node.js](https://nodejs.org/) v4+ to run.
+This app requires [Node.js](https://nodejs.org/) v4+ to run.
 
 Clone or download this project.
 

@@ -10,9 +10,9 @@ const AccountCard = props => (
   <div className={accountCard} onClick={props.handleClick}>
     <p className={title}>{props.account.get('name')}</p>
     <div className={content}>
-      <LabelDescriptionComboContainer label={<EmailIcon />} description={props.account.get('email')+''}/>
+      <LabelDescriptionComboContainer label={<EmailIcon />} description={`${props.account.get('email')}`}/>
       <LabelDescriptionComboContainer label={<MobileIcon />}
-                                      description={formattedMobile(props.account.get('phone') + '')}/>
+                                      description={`${formattedMobile(props.account.get('phone'))}`}/>
     </div>
   </div>
 );
