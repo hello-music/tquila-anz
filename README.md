@@ -2,6 +2,8 @@
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
+[Live demo](https://tquila-test.firebaseapp.com)
+
 There are three steps developed during the completion of this test:
 1. normalise response data - **normalizr**
 2. digest response data - **reducers**
