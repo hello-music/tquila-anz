@@ -65,7 +65,7 @@ There are three steps developed during the completion of this test:
 
 ### Code Quality Control
 - Eslint
-- Eslint-plugin-airbnb - **personal preference**
+- Eslint-plugin-standard - **personal preference**
 
 ### Installation
 
