@@ -1,4 +1,11 @@
 
 .listViewContainer {
     margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.footer {
+    background-color: #5f9ea0;
+    height: 80px;
+    composes: fullWidth from 'sharedStyles/styles.css';
 }

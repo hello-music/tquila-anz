@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as accountsActionCreators from 'redux/modules/accounts';
 import { List } from 'immutable';
+import { Loading } from 'components';
 import { hasAccounts } from 'helpers/selectors';
 import { getAccounts } from 'helpers/api';
 
@@ -14,7 +15,7 @@ class MainContainer extends React.Component {
   }
 
   render() {
-    return this.props.isFetching ? (<div>Fetching ...</div>) :
+    return this.props.isFetching ? (<Loading />) :
       (<div>
         {this.props.error && <p>error: {this.props.error}</p>}
         {this.props.children}
