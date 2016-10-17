@@ -8,3 +8,4 @@ export { default as CardHolder } from './CardHolder/CardHolder.jsx';
 export { default as AccountCard } from './AccountCard/AccountCard.jsx';
 export { default as ContactCard } from './ContactCard/ContactCard.jsx';
 export { default as ContactsPage } from './ContactsPage/ContactsPage.jsx';
+export { default as LabelDescriptionCombo } from './LabelDescriptionCombo/LabelDescriptionCombo.jsx';

@@ -2,13 +2,18 @@ import React, {PropTypes} from 'react';
 import { Map } from 'immutable';
 import EmailIcon from 'react-icons/lib/fa/envelope-o';
 import MobileIcon from 'react-icons/lib/fa/mobile';
-import { title, accountCard } from './styles.css';
+import { formattedMobile } from 'helpers/formatters';
+import { title, accountCard, content } from './styles.css';
+import { LabelDescriptionComboContainer } from 'containers';
 
 const AccountCard = props => (
   <div className={accountCard} onClick={props.handleClick}>
     <p className={title}>{props.account.get('name')}</p>
-    <p><EmailIcon />{props.account.get('email')}</p>
-    <p><MobileIcon />{props.account.get('phone')}</p>
+    <div className={content}>
+      <LabelDescriptionComboContainer label={<EmailIcon />} description={props.account.get('email')+''}/>
+      <LabelDescriptionComboContainer label={<MobileIcon />}
+                                      description={formattedMobile(props.account.get('phone') + '')}/>
+    </div>
   </div>
 );
 

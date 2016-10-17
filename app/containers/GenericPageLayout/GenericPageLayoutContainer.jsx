@@ -1,6 +1,6 @@
 import React  from 'react';
 import { GenericPageLayout } from 'components';
 
-const GenericPageLayoutContainer = props => (<GenericPageLayout />);
+const GenericPageLayoutContainer = () => (<GenericPageLayout />);
 
 export default GenericPageLayoutContainer;
